@@ -1,4 +1,6 @@
+/* adlam-display-regular - latin */
 /* Variables replaced by static values */
+@import url(https://fonts.googleapis.com/css2?family=Kodchasan:wght@100;200;300;400;500;600;700&display=swap);
 
 /* Reset and base styles */
 * {
@@ -17,14 +19,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fafb;
   color: #111827;
   line-height: 1.6;
+  font-family: "Kodchasan", sans-serif;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -37,7 +39,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
+.price--text {
+  color: #e53935;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
 /* Header */
 .header {
   background: white;
@@ -168,35 +174,19 @@ a:hover {
   margin-bottom: 10px;
   font-weight: 600;
 }
-
-.contact__form {
-  max-width: 400px;
-  margin: 20px auto 0;
+.contact__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-.contact__form input,
-.contact__form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: inherit;
-}
-
-.contact__form button {
-  width: 100%;
-  font-size: 1.1rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #3b82f6;
-  color: white;
+.contact__container p {
+  padding: 1rem;
+  background-color: rgba(196, 165, 108, 0.328);
   cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  border-radius: 10px;
 }
-
 .contact__form button:hover {
   background-color: #2563eb;
 }
@@ -209,7 +199,28 @@ a:hover {
   text-align: center;
   font-size: 0.9rem;
 }
-
+/* works */
+.works {
+  background: rgba(166, 97, 97, 0.349);
+  padding: 2rem 0;
+}
+.works__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.works__gallery {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.works__gallery-img {
+  border-radius: 10px;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .services__list {
@@ -229,5 +240,10 @@ a:hover {
   .header .nav__link {
     display: inline-block;
     margin: 0 10px 10px 10px;
+  }
+  .works__gallery-img {
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
   }
 }
